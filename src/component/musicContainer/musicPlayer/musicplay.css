@@ -1,0 +1,6 @@
+.card_box{
+    min-height: 60vh;
+    width: 60%;
+    background-color: rgb(247, 81, 81);
+    border-radius: 5px;
+}

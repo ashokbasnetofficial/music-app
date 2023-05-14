@@ -80,7 +80,7 @@ const Header = () => {
   }));
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none',color:'black',mt:3,px:2}}>
         <Toolbar variant="dense" sx={{ bgcolor: 'none' }}>
           <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2, backgroundColor: 'black' }}>
             <MusicNoteIcon />
@@ -98,7 +98,7 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 
-            <Button variant="contained">Upgrade Plan</Button>
+            <Button variant="contained" sx={{ backgroundColor: 'rgb(230, 230, 230)', boxShadow: 'none',border:'none',color:'black',textTransform:'capitalize'}}>Upgrade Plan</Button>
             <IconButton size="large" aria-label="setting" color="inherit">
               <SettingsIcon />
             </IconButton>

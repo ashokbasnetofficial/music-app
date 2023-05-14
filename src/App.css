@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 :root{
-  --primary-color:rgb(255, 198, 128);
-  --secondary-color:rgb(143, 141, 139);
+  --primary-color:rgb(224, 224, 224);
+  --secondary-color:rgb(245, 245, 245);
 }
 
 .container_fluid{
