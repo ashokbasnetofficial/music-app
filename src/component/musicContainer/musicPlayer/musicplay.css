@@ -1,6 +1,7 @@
 .card_box{
     min-height: 60vh;
-    width: 60%;
-    background-color: rgb(247, 81, 81);
-    border-radius: 5px;
+    width: 100%;
+    background-color: #d9dae3;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
 }

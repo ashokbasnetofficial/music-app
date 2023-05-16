@@ -5,14 +5,18 @@
   box-sizing: border-box;
 }
 :root{
-  --primary-color:rgb(224, 224, 224);
-  --secondary-color:rgb(245, 245, 245);
+  --primary-color:#dadde5;
+  --secondary-color:#f1f2f6;
 }
 
 .container_fluid{
   width: 100vw;
   height: 100vh;
-  background-color: var(--primary-color);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)) ,url('https://image.slidesdocs.com/responsive-images/background/business-note-pink-creative-cute-music-powerpoint-background_07e95f4ea3__960_540.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
   display: grid;
   display: -ms-grid;
   display: -moz-grid;
@@ -20,8 +24,9 @@
   position: relative;
 }
 .container-box{
-  min-width: 90%;
+  width: 80vw;
   height: 90vh;
+  opacity: .9;
   background-color:var(--secondary-color) ;
   border-radius: 20px;
   position: relative;
@@ -34,7 +39,11 @@
   width: 100px;
   height: 35%;
   border-radius: 6px;
-  background-color: rgb(160, 234, 42);
+  background-image: url('https://w0.peakpx.com/wallpaper/960/845/HD-wallpaper-nature-landscape-landscape-nature-thumbnail.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
   top: 32%;
   left: -1%;
 
@@ -44,8 +53,11 @@
   position: absolute;
   width: 100px;
   height: 35%;
+  background-image: url('https://wallpapershome.com/images/wallpapers/road-720x1280-trees-summer-4k-17125.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 6px;
-  background-color: rgb(160, 234, 42);
+
   top: 32%;
   right: -1%;
 

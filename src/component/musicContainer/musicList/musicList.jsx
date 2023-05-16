@@ -8,23 +8,23 @@ const MusicList = () => {
 
   return (
     <>
-      <Container mxWidth="sm">
+      <Container mxWidth="sm" sx={{backgroundImage:'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))'}}>
         <Grid container spacing={0}>
           <Grid xs={12} >
-            <Typography variant="body1" component="h2">
+            <Typography variant="h5" fontWeight="bold" component="h2">
               Sakambari
             </Typography>
 
 
           </Grid>
           <Grid xs={12} sx={{display:'flex'}}>
-            <Typography variant="body1" component="h2">
+            <Typography variant="body1" fontWeight="bold" component="h2">
               Prakash Saput
             </Typography>
-            <Typography variant="body1" component="h2" sx={{mx:2}}>
+            <Typography variant="body1" fontWeight="bold" component="h2" sx={{mx:2}}>
               . 2023
             </Typography>
-            <Typography variant="body1" component="h2" sx={{mx:2}}>
+            <Typography variant="body1" fontWeight="bold" component="h2" sx={{mx:2}}>
               . 20 Songs
             </Typography>
            
@@ -54,7 +54,7 @@ const MusicList = () => {
           <Box>
           <Typography variant="body1" component="h2" 
             sx={{mx:2 ,display:'flex',justifyContent:'start'}}>
-              2. Timi Lai Herne Bani Paryo - Anu Chaudhary 
+              2. Sim Sime Panima -Rekha Shah
             </Typography>
             </Box>
           </Grid>
