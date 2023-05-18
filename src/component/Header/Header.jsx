@@ -82,7 +82,7 @@ const Header = () => {
     <>
       <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none',color:'black',mt:3,px:2}}>
         <Toolbar variant="dense" sx={{ bgcolor: 'none' }}>
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2, backgroundColor: 'black' }}>
+          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2, backgroundColor: 'black' ,color:'white'}}>
             <MusicNoteIcon />
 
           </IconButton>

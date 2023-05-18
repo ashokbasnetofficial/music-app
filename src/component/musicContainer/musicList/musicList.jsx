@@ -1,105 +1,84 @@
-import {IconButton, Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box'
-
+import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-const MusicList = () => {
-
+import './musiclist.css';
+const MusicList = (props) => {
+const nextSong =(e)=>{
+props.setIndex(e);
+props.setPlayState(true);
+}
   return (
     <>
-      <Container mxWidth="sm" sx={{backgroundImage:'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))'}}>
+      <Container mxWidth="sm" >
         <Grid container spacing={0}>
           <Grid xs={12} >
             <Typography variant="h5" fontWeight="bold" component="h2">
-              Sakambari
+              {props.tracks[props.index].name}
             </Typography>
 
 
           </Grid>
-          <Grid xs={12} sx={{display:'flex'}}>
+          <Grid xs={12} sx={{ display: 'flex' }}>
             <Typography variant="body1" fontWeight="bold" component="h2">
-              Prakash Saput
+              {props.index+1}. {props.tracks[props.index].artist}
             </Typography>
-            <Typography variant="body1" fontWeight="bold" component="h2" sx={{mx:2}}>
+            <Typography variant="body1" fontWeight="bold" component="h2" sx={{ mx: 2 }}>
               . 2023
             </Typography>
-            <Typography variant="body1" fontWeight="bold" component="h2" sx={{mx:2}}>
-              . 20 Songs
+            <Typography variant="body1" fontWeight="bold" component="h2" sx={{ mx: 2 }}>
+              . {props.tracks.length} Songs
             </Typography>
-           
+
           </Grid>
-          <Grid xs={12}  sx={
-            {backgroundColor:'black',
-            borderRadius:'5px',
-            p:2,
-            m:2,
-            color:'white'
-            }
-            }>
-          <Box>
-          <Typography variant="body1" component="h2" 
-            sx={{mx:2 ,display:'flex',justifyContent:'start'}}>
-            <PlayArrowIcon />  Sakambari(Fulmaya) -prakash saput
-            </Typography>
-            </Box>
-          </Grid>
-          <Grid xs={12}  sx={
-            {
-            p:2,
-        
-            color:'black'
-            }
-            }>
-          <Box>
-          <Typography variant="body1" component="h2" 
-            sx={{mx:2 ,display:'flex',justifyContent:'start'}}>
-              2. Sim Sime Panima -Rekha Shah
-            </Typography>
-            </Box>
-          </Grid>
-          <Grid xs={12}  sx={
-            {
-            p:2,
-           
-            color:'black'
-            }
-            }>
-          <Box>
-          <Typography variant="body1" component="h2" 
-            sx={{mx:2 ,display:'flex',justifyContent:'start'}}>
-              2. Timi Lai Herne Bani Paryo - Anu Chaudhary 
-            </Typography>
-            </Box>
-          </Grid>
-          <Grid xs={12}  sx={
-            {
-            p:2,
-          
-            color:'black'
-            }
-            }>
-          <Box>
-          <Typography variant="body1" component="h2" 
-            sx={{mx:2 ,display:'flex',justifyContent:'start'}}>
-              3. Bagai chama Najau timi -Udit Narayan Jha
-            </Typography>
-            </Box>
-          </Grid>
-          <Grid xs={12}  sx={
-            {
-            p:2,
-           
-            color:'black'
-            }
-            }>
-          <Box>
-          <Typography variant="body1" component="h2" 
-            sx={{mx:2 ,display:'flex',justifyContent:'start'}}>
-              4. Pani Pani Banyeu - Eleena Chauhan
-            </Typography>
-            </Box>
-          </Grid>
+          {
+            props.tracks.map((song, index) => {
+              return (
+                <Grid
+                 
+                  xs={12}
+                  sx={
+                    props.index === index
+                      ? {
+                        backgroundColor: 'black',
+                        borderRadius: '5px',
+                        display:'flex',
+                        pr:1,
+                        py:1,
+                        color: 'white',
+                      }
+                      : {
+                        my:1,
+                        color: 'black',
+                       
+                      }
+                  }
+                >
+                  <Box>
+                    <Typography
+
+                     onClick={(e)=>nextSong(index)}
+                      variant="body1"
+                      component="h2"
+                      sx={{ mx: 1, display: 'flex', justifyContent: 'start',cursor:'pointer'}}
+                    >
+                     {
+                    ( props.playState===true && props.index===index) && 
+                       <PlayArrowIcon/>
+                       ||
+                       ( props.playState===false && props.index===index) && 
+                       <PauseIcon/>
+                     }
+                     {index+1}. {song.artist}-{song.name}
+                    </Typography>
+                  </Box>
+                   
+                </Grid>
+              );
+            })
+          }
         </Grid>
       </Container>
     </>

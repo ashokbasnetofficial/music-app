@@ -11,7 +11,7 @@ const App = () => {
         <div className="container-box">
           <Header />
           <MusicContainer index={0}/>
-          <MusicProgressBar/>
+          
         </div>
       </div>
     </>
